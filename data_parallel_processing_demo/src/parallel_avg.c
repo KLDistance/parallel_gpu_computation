@@ -106,7 +106,7 @@ int main()
 
     // Execute the kernel codes
     size_t global_item_num = data_arr_num;      // Handle the whole list
-    size_t local_item_num = 1;                 // Cut into 64 pieces
+    size_t local_item_num = 64;                 // Cut into 64 pieces
     ret = clEnqueueNDRangeKernel(command_queue, kernel, 1, NULL, &global_item_num, &local_item_num, 0, NULL, NULL);
 
     // Read GPU buffer into the local ram buffer
