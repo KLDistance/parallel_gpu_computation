@@ -48,7 +48,7 @@ int main()
     // Create command queue 
     // Here do not use the old version "clCreateCommandQueue" which has been deprecated before CL 2.0
     // Use "clCreateCommandQueueWithProperties" instead!
-    cl_command_queue command_queue = clCreateCommandQueueWithProperties(context,device_id, 0, &ret);
+    cl_command_queue command_queue = clCreateCommandQueueWithProperties(context, device_id, 0, &ret);
     // Create buffer for each vector on the device
     cl_mem a_mem_obj = clCreateBuffer(context, CL_MEM_READ_ONLY, list_size * sizeof(int), NULL, &ret);
     cl_mem b_mem_obj = clCreateBuffer(context, CL_MEM_READ_ONLY, list_size * sizeof(int), NULL, &ret);
